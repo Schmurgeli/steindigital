@@ -68,6 +68,10 @@ interface TranslationKeys {
   "contact.error": string;
   "contact.required": string;
   "contact.invalid_email": string;
+
+  // Legal
+  "legal.title": string;
+  "legal.subtitle": string;
 }
 
 interface LanguageContextType {
@@ -133,8 +137,8 @@ const translations: Record<Language, TranslationKeys> = {
     // Contact
     "contact.title": "Get in Touch",
     "contact.subtitle": "Let's discuss how we can help your business grow",
-    "contact.name": "Your Name",
-    "contact.email": "Your Email",
+    "contact.name": "Name",
+    "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.address": "Address",
     "contact.subject": "Subject",
@@ -144,6 +148,10 @@ const translations: Record<Language, TranslationKeys> = {
     "contact.error": "Error sending message. Please try again.",
     "contact.required": "This field is required",
     "contact.invalid_email": "Please enter a valid email address",
+
+    // Legal
+    "legal.title": "Legal Documents",
+    "legal.subtitle": "Please review our legal documents and policies",
   },
   de: {
     // Navbar
@@ -200,7 +208,7 @@ const translations: Record<Language, TranslationKeys> = {
     "contact.title": "Kontaktieren Sie uns",
     "contact.subtitle": "Lassen Sie uns besprechen, wie wir Ihr Unternehmen unterstützen können",
     "contact.name": "Ihr Name",
-    "contact.email": "Ihre E-Mail",
+    "contact.email": "E-Mail",
     "contact.phone": "Telefon",
     "contact.address": "Adresse",
     "contact.subject": "Betreff",
@@ -210,6 +218,10 @@ const translations: Record<Language, TranslationKeys> = {
     "contact.error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
     "contact.required": "Dieses Feld ist erforderlich",
     "contact.invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+
+    // Legal
+    "legal.title": "Rechtliche Dokumente",
+    "legal.subtitle": "Bitte lesen Sie unsere rechtlichen Dokumente und Richtlinien",
   },
 };
 

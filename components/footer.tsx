@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-green-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-48 gap-8">
           <div className="md:col-span-1">
@@ -59,22 +59,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                <Link href="/legal?doc=privacy" className="text-gray-400 hover:text-green-400 transition-colors">
                   {t("footer.privacy")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                <Link href="/legal?doc=terms" className="text-gray-400 hover:text-green-400 transition-colors">
                   {t("footer.terms")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                <Link href="/legal?doc=cookies" className="text-gray-400 hover:text-green-400 transition-colors">
                   {t("footer.cookies")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                <Link href="/legal?doc=gdpr" className="text-gray-400 hover:text-green-400 transition-colors">
                   {t("footer.gdpr")}
                 </Link>
               </li>

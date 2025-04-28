@@ -8,7 +8,7 @@ export default function Services() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-green-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -17,19 +17,19 @@ export default function Services() {
 
             <div className="space-y-4">
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Custom web and mobile application development</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Digital strategy and consulting services</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Data analytics and business intelligence solutions</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">Cloud infrastructure and DevOps services</p>
               </div>
             </div>

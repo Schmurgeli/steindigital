@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#services"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
+              className="bg-[#459a35] hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
               scroll={true}
             >
               Our Services

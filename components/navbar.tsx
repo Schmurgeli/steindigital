@@ -31,7 +31,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+    <header className="fixed w-full bg-transparent backdrop-blur-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
@@ -45,20 +45,20 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
+          <Link href="/" className="text-[#459a35] hover:text-green-500 font-medium transition-colors">
             {t("nav.home")}
           </Link>
           <a
-            href="#services"
-            onClick={(e) => handleScroll(e, "#services")}
-            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+            href="#features"
+            onClick={(e) => handleScroll(e, "#features")}
+            className="text-[#459a35] hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
             {t("nav.services")}
           </a>
           <a
             href="#about"
             onClick={(e) => handleScroll(e, "#about")}
-            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+            className="text-[#459a35] hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
             {t("nav.about")}
           </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => handleScroll(e, "#contact")}
-            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+            className="text-[#459a35] hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
             {t("nav.contact")}
           </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <button
             onClick={toggleLanguage}
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer"
+            className="bg-[#459a35] hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer"
           >
             {t("nav.language")}
           </button>
@@ -99,16 +99,16 @@ export default function Navbar() {
               {t("nav.home")}
             </Link>
             <a
-              href="#services"
-              onClick={(e) => handleScroll(e, "#services")}
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+              href="#features"
+              onClick={(e) => handleScroll(e, "#features")}
+              className="text-gray-900 hover:text-green-600 font-medium transition-colors cursor-pointer"
             >
               {t("nav.services")}
             </a>
             <a
               href="#about"
               onClick={(e) => handleScroll(e, "#about")}
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+              className="text-gray-900 hover:text-green-600 font-medium transition-colors cursor-pointer"
             >
               {t("nav.about")}
             </a>
@@ -116,13 +116,13 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, "#contact")}
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+              className="text-gray-900 hover:text-green-600 font-medium transition-colors cursor-pointer"
             >
               {t("nav.contact")}
             </a>
             <button
               onClick={toggleLanguage}
-              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer inline-block w-fit"
+              className="bg-[#459a35] hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer inline-block w-fit"
             >
               {t("nav.language")}
             </button>
