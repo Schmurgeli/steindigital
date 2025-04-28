@@ -1,18 +1,40 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image src="/images/logo.png" alt="SteinDigital Logo" width={200} height={50} className="h-10 w-auto" />
+          <Image
+            src="/images/steindigital_logo.svg"
+            alt="SteinDigital Logo"
+            width={200}
+            height={50}
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -20,27 +42,44 @@ export default function Navbar() {
           <Link href="/" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
             Home
           </Link>
-          <Link href="#services" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
+          <a
+            href="#services"
+            onClick={(e) => handleScroll(e, "#services")}
+            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+          >
             Services
-          </Link>
-          <Link href="#about" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
+          </a>
+          <a
+            href="#about"
+            onClick={(e) => handleScroll(e, "#about")}
+            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+          >
             About Us
-          </Link>
-          <Link href="#projects" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
+          </a>
+          <a
+            href="#projects"
+            onClick={(e) => handleScroll(e, "#projects")}
+            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+          >
             Projects
-          </Link>
-          <Link href="#contact" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
+          </a>
+          <a
+            href="#contact"
+            onClick={(e) => handleScroll(e, "#contact")}
+            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
+          >
             Contact
-          </Link>
+          </a>
         </nav>
 
         <div className="hidden md:block">
-          <Link
+          <a
             href="#contact"
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors"
+            onClick={(e) => handleScroll(e, "#contact")}
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer"
           >
             Get Started
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -60,44 +99,44 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
+            <a
               href="#services"
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScroll(e, "#services")}
+              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
               Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="#about"
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScroll(e, "#about")}
+              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
               About Us
-            </Link>
-            <Link
+            </a>
+            <a
               href="#projects"
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScroll(e, "#projects")}
+              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
               Projects
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
               Contact
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
-              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors inline-block w-fit"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer inline-block w-fit"
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       )}
     </header>
-  )
+  );
 }

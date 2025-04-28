@@ -1,5 +1,7 @@
-import Image from "next/image"
-import { CheckCircle } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import { CheckCircle } from "lucide-react";
 
 export default function Services() {
   return (
@@ -7,7 +9,7 @@ export default function Services() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Digital Solutions for the Modern World</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Dtal Solutions for the Modern World</h2>
             <p className="text-gray-600 mb-8">
               At SteinDigital, we combine cutting-edge technology with creative thinking to deliver digital solutions
               that drive results. Our team of experts is dedicated to helping businesses navigate the digital landscape
@@ -35,10 +37,24 @@ export default function Services() {
           </div>
 
           <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
-            <Image src="/images/eco-tourism.jpeg" alt="Digital solutions in action" fill className="object-cover" />
+            {/* Test image */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <img src="/images/city_maps.jpg" alt="Test image" className="w-full h-full object-cover" />
+            </div>
+            <Image
+              src="/images/city_maps.jpg"
+              alt="Digital solutions in action"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={100}
+              onError={(e) => console.error("Image failed to load:", e)}
+              onLoad={(e) => console.log("Image loaded successfully")}
+            />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
