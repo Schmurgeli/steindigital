@@ -1,5 +1,10 @@
+import { Suspense } from "react";
 import Legal from "@/components/legal";
 
 export default function LegalPage() {
-  return <Legal />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Legal />
+    </Suspense>
+  );
 }
