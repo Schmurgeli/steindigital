@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/eco-tourism.jpeg"
+          src="/images/hero.jpeg"
           alt="Mountain landscape with person on cliff"
           fill
           className="object-cover"
