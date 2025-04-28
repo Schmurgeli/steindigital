@@ -4,9 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "./language-provider";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -22,6 +24,10 @@ export default function Navbar() {
       });
       setIsMenuOpen(false);
     }
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "de" : "en");
   };
 
   return (
@@ -40,46 +46,39 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <Link href="/" className="text-gray-900 hover:text-green-500 font-medium transition-colors">
-            Home
+            {t("nav.home")}
           </Link>
           <a
             href="#services"
             onClick={(e) => handleScroll(e, "#services")}
             className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
-            Services
+            {t("nav.services")}
           </a>
           <a
             href="#about"
             onClick={(e) => handleScroll(e, "#about")}
             className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
-            About Us
+            {t("nav.about")}
           </a>
-          <a
-            href="#projects"
-            onClick={(e) => handleScroll(e, "#projects")}
-            className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
-          >
-            Projects
-          </a>
+
           <a
             href="#contact"
             onClick={(e) => handleScroll(e, "#contact")}
             className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
           >
-            Contact
+            {t("nav.contact")}
           </a>
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href="#contact"
-            onClick={(e) => handleScroll(e, "#contact")}
+          <button
+            onClick={toggleLanguage}
             className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer"
           >
-            Get Started
-          </a>
+            {t("nav.language")}
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -97,43 +96,36 @@ export default function Navbar() {
               className="text-gray-900 hover:text-green-500 font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              {t("nav.home")}
             </Link>
             <a
               href="#services"
               onClick={(e) => handleScroll(e, "#services")}
               className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
-              Services
+              {t("nav.services")}
             </a>
             <a
               href="#about"
               onClick={(e) => handleScroll(e, "#about")}
               className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
-              About Us
+              {t("nav.about")}
             </a>
-            <a
-              href="#projects"
-              onClick={(e) => handleScroll(e, "#projects")}
-              className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
-            >
-              Projects
-            </a>
+
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, "#contact")}
               className="text-gray-900 hover:text-green-500 font-medium transition-colors cursor-pointer"
             >
-              Contact
+              {t("nav.contact")}
             </a>
-            <a
-              href="#contact"
-              onClick={(e) => handleScroll(e, "#contact")}
+            <button
+              onClick={toggleLanguage}
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition-colors cursor-pointer inline-block w-fit"
             >
-              Get Started
-            </a>
+              {t("nav.language")}
+            </button>
           </div>
         </div>
       )}

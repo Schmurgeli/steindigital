@@ -1,20 +1,19 @@
 "use client";
 
+import { useLanguage } from "./language-provider";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Dtal Solutions for the Modern World</h2>
-            <p className="text-gray-600 mb-8">
-              At SteinDigital, we combine cutting-edge technology with creative thinking to deliver digital solutions
-              that drive results. Our team of experts is dedicated to helping businesses navigate the digital landscape
-              and achieve their goals.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("services.title")}</h2>
+            <p className="text-gray-600 mb-8">{t("services.subtitle")}</p>
 
             <div className="space-y-4">
               <div className="flex items-start">

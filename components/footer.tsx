@@ -1,128 +1,81 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useLanguage } from "./language-provider";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-48 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/images/logo.png"
+                src="/images/steindigital_logo.svg"
                 alt="SteinDigital Logo"
                 width={180}
                 height={45}
                 className="h-10 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-gray-400 mb-6">
-              Innovative digital solutions for modern businesses. We help companies navigate the digital landscape and
-              achieve their goals.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                <Github className="h-5 w-5" />
-              </Link>
-            </div>
+            <p className="text-gray-400 mb-6">{t("footer.description")}</p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.company")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Web Development
+                  {t("footer.about")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Mobile Apps
+                  {t("footer.team")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Digital Marketing
+                  {t("footer.careers")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  UI/UX Design
+                  {t("footer.blog")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Cloud Solutions
+                  {t("footer.contact")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  About Us
+                  {t("footer.privacy")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Our Team
+                  {t("footer.terms")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Careers
+                  {t("footer.cookies")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  Cookie Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  GDPR Compliance
+                  {t("footer.gdpr")}
                 </Link>
               </li>
             </ul>
@@ -130,9 +83,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} SteinDigital. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} steindigital. {t("footer.copyright")}
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

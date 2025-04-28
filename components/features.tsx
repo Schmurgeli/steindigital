@@ -1,49 +1,53 @@
-import { Code, Globe, BarChart, Smartphone } from "lucide-react"
+"use client";
+
+import { useLanguage } from "./language-provider";
+import { CheckCircle } from "lucide-react";
 
 export default function Features() {
-  const features = [
-    {
-      icon: <Globe className="h-10 w-10 text-green-500" />,
-      title: "Web Development",
-      description: "Custom websites and web applications built with the latest technologies.",
-    },
-    {
-      icon: <Smartphone className="h-10 w-10 text-green-500" />,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-    },
-    {
-      icon: <BarChart className="h-10 w-10 text-green-500" />,
-      title: "Digital Marketing",
-      description: "Data-driven marketing strategies to grow your online presence.",
-    },
-    {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "Custom Solutions",
-      description: "Tailored digital solutions to meet your specific business needs.",
-    },
-  ]
+  const { t } = useLanguage();
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We provide comprehensive digital solutions to help your business thrive in the digital age.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("features.title")}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{t("features.subtitle")}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex items-center mb-4">
+              <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
+              <h3 className="text-xl font-semibold">{t("features.innovation")}</h3>
             </div>
-          ))}
+            <p className="text-gray-600">{t("features.innovation.desc")}</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex items-center mb-4">
+              <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
+              <h3 className="text-xl font-semibold">{t("features.expertise")}</h3>
+            </div>
+            <p className="text-gray-600">{t("features.expertise.desc")}</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex items-center mb-4">
+              <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
+              <h3 className="text-xl font-semibold">{t("features.support")}</h3>
+            </div>
+            <p className="text-gray-600">{t("features.support.desc")}</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex items-center mb-4">
+              <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
+              <h3 className="text-xl font-semibold">{t("features.quality")}</h3>
+            </div>
+            <p className="text-gray-600">{t("features.quality.desc")}</p>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
