@@ -22,23 +22,23 @@ export default function Contact() {
               <Mail className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-medium">{t("contact.email")}</p>
-                <p className="text-gray-600">info@steindigital.com</p>
+                <p className="text-gray-600">steindigital@gmx.de</p>
               </div>
             </div>
 
-            <div className="flex items-start">
+            {/* <div className="flex items-start">
               <Phone className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-medium">{t("contact.phone")}</p>
                 <p className="text-gray-600">+49 (0) 123 456 789</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex items-start">
               <MapPin className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-medium">{t("contact.address")}</p>
-                <p className="text-gray-600">Musterstraße 123, 12345 Berlin, Deutschland</p>
+                <p className="text-gray-600">Am Sonnenhang 37, 65321 Heidenrod, Deutschland</p>
               </div>
             </div>
           </div>

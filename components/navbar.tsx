@@ -31,7 +31,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full bg-transparent backdrop-blur-md z-50">
+    <header className="fixed w-full bg-white/5 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image

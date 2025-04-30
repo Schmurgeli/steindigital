@@ -16,6 +16,7 @@ interface TranslationKeys {
   "hero.title": string;
   "hero.subtitle": string;
   "hero.cta": string;
+  "hero.services": string;
 
   // Services
   "services.title": string;
@@ -72,6 +73,7 @@ interface TranslationKeys {
   // Legal
   "legal.title": string;
   "legal.subtitle": string;
+  
 }
 
 interface LanguageContextType {
@@ -95,6 +97,7 @@ const translations: Record<Language, TranslationKeys> = {
     "hero.title": "DIGITALISATION AND HIKING TOURISM",
     "hero.subtitle": "We help companies navigate the digital landscape and achieve their goals",
     "hero.cta": "Get Started",
+    "hero.services": "Our Services",
 
     // Services
     "services.title": "Our Services",
@@ -117,7 +120,7 @@ const translations: Record<Language, TranslationKeys> = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
     "footer.cookies": "Cookie Policy",
-    "footer.gdpr": "GDPR Compliance",
+    "footer.gdpr": "Legal Notice",
     "footer.copyright": "All rights reserved",
     "footer.description":
       "Innovative digital solutions for modern businesses. We help companies navigate the digital landscape and achieve their goals.",
@@ -152,6 +155,7 @@ const translations: Record<Language, TranslationKeys> = {
     // Legal
     "legal.title": "Legal Documents",
     "legal.subtitle": "Please review our legal documents and policies",
+   
   },
   de: {
     // Navbar
@@ -165,9 +169,10 @@ const translations: Record<Language, TranslationKeys> = {
     "hero.title": "DIGITALISIERUNG UND WANDERTOURISMUS",
     "hero.subtitle": "Wir helfen Unternehmen, sich im digitalen Umfeld zurechtzufinden und ihre Ziele zu erreichen",
     "hero.cta": "Loslegen",
+    "hero.services": "Unser Service",
 
     // Services
-    "services.title": "Unsere Dienstleistungen",
+    "services.title": "Unser Service",
     "services.subtitle": "Umfassende digitale Lösungen für Ihre Geschäftsanforderungen",
     "services.web": "Webentwicklung",
     "services.web.desc": "Individuelle Websites und Webanwendungen",
@@ -187,7 +192,7 @@ const translations: Record<Language, TranslationKeys> = {
     "footer.privacy": "Datenschutz",
     "footer.terms": "Nutzungsbedingungen",
     "footer.cookies": "Cookie-Richtlinie",
-    "footer.gdpr": "DSGVO-Konformität",
+    "footer.gdpr": "Impressum",
     "footer.copyright": "Alle Rechte vorbehalten",
     "footer.description":
       "Innovative digitale Lösungen für modernes Unternehmen. Wir helfen Unternehmen, sich im digitalen Umfeld zurechtzufinden und ihre Ziele zu erreichen.",
@@ -222,6 +227,7 @@ const translations: Record<Language, TranslationKeys> = {
     // Legal
     "legal.title": "Rechtliche Dokumente",
     "legal.subtitle": "Bitte lesen Sie unsere rechtlichen Dokumente und Richtlinien",
+    
   },
 };
 

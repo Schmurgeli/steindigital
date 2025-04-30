@@ -26,14 +26,14 @@ export default function Hero() {
       <div className="container mx-auto px-4 z-10 text-white">
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-7xl font-bold mb-6">{t("hero.title")}</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl">{t("hero.subtitle")}</p>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#services"
               className="bg-[#459a35] hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
               scroll={true}
             >
-              Our Services
+              {t("hero.services")}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
