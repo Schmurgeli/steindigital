@@ -184,6 +184,7 @@ export default function Legal() {
         title: "Impressum",
         content: `
           <h2>Angaben gemäß § 5 TMG:</h2><br />
+          <p>Helena Stein</p>
           <p>steindigital<br />
           Am sonnenhang 37<br />
           65321 Heidenrod<br />
@@ -191,16 +192,16 @@ export default function Legal() {
          <br />
           <h2>Kontakt:</h2>
           <p>E-mail: steindigital@gmx.de</p>
-
+<br />
           <h2>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:</h2>
           <p>DE 369713031</p>
           <br />
-          <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
+          <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2><br />
           <p>steindigital</p>
           <p>Am Sonnenhang 37</p>
           <p>65321 Heidenrod</p>
           <p>Deutschland</p>
-          <p>Geschäftsführerin: Helena Stein</p>
+          
           <br />
           <h2>Haftungsausschluss:</h2>
           <p>Der Inhalt dieser Website wird sorgfältig erstellt und überprüft. Dennoch übernimmt der Verantwortliche keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen. Haftungsansprüche gegen den Verantwortlichen, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung der Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern keine vorsätzliche oder grobe Fahrlässigkeit vorliegt.</p>
