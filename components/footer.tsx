@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-green-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-48 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
@@ -24,38 +24,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-6">{t("footer.description")}</p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t("footer.company")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  {t("footer.about")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  {t("footer.team")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  {t("footer.careers")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  {t("footer.blog")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-                  {t("footer.contact")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
+          <div className="md:col-span-1 md:text-right">
             <h3 className="text-lg font-semibold mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-2">
               <li>

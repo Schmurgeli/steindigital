@@ -18,20 +18,17 @@ export default function Services() {
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">Custom web and mobile application development</p>
+                <p className="text-gray-700">{t("services.items.webDevelopment")}</p>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">Digital strategy and consulting services</p>
+                <p className="text-gray-700">{t("services.items.digitalStrategy")}</p>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">Data analytics and business intelligence solutions</p>
+                <p className="text-gray-700">{t("services.items.dataAnalytics")}</p>
               </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">Cloud infrastructure and DevOps services</p>
-              </div>
+             
             </div>
           </div>
 

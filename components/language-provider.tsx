@@ -14,19 +14,17 @@ interface TranslationKeys {
 
   // Hero
   "hero.title": string;
-  "hero.subtitle": string;
+
   "hero.cta": string;
-  "hero.services": string;
 
   // Services
   "services.title": string;
   "services.subtitle": string;
-  "services.web": string;
-  "services.web.desc": string;
-  "services.mobile": string;
-  "services.mobile.desc": string;
-  "services.cloud": string;
-  "services.cloud.desc": string;
+  "services.items.webDevelopment": string;
+  "services.items.digitalStrategy": string;
+  "services.items.dataAnalytics": string;
+ 
+
 
   // Footer
   "footer.company": string;
@@ -73,7 +71,6 @@ interface TranslationKeys {
   // Legal
   "legal.title": string;
   "legal.subtitle": string;
-  
 }
 
 interface LanguageContextType {
@@ -95,19 +92,17 @@ const translations: Record<Language, TranslationKeys> = {
 
     // Hero
     "hero.title": "DIGITALISATION AND HIKING TOURISM",
-    "hero.subtitle": "We help companies navigate the digital landscape and achieve their goals",
+
     "hero.cta": "Get Started",
-    "hero.services": "Our Services",
 
     // Services
     "services.title": "Our Services",
     "services.subtitle": "Comprehensive digital solutions for your business needs",
-    "services.web": "Web Development",
-    "services.web.desc": "Custom websites and web applications",
-    "services.mobile": "Mobile Apps",
-    "services.mobile.desc": "iOS and Android applications",
-    "services.cloud": "Cloud Solutions",
-    "services.cloud.desc": "Scalable cloud infrastructure",
+    "services.items.webDevelopment": "Custom web and mobile application development",
+    "services.items.digitalStrategy": "Digital strategy and consulting services",
+    "services.items.dataAnalytics": "Data analytics and business intelligence solutions",
+    
+    
 
     // Footer
     "footer.company": "Company",
@@ -155,31 +150,28 @@ const translations: Record<Language, TranslationKeys> = {
     // Legal
     "legal.title": "Legal Documents",
     "legal.subtitle": "Please review our legal documents and policies",
-   
   },
   de: {
     // Navbar
     "nav.home": "Startseite",
-    "nav.services": "Dienstleistungen",
-    "nav.about": "Über uns",
+    "nav.services": "Digitalisierung von Wanderwegen",
+    "nav.about": "Digitales Wegemanagement",
     "nav.contact": "Kontakt",
     "nav.language": "EN",
 
     // Hero
     "hero.title": "DIGITALISIERUNG UND WANDERTOURISMUS",
-    "hero.subtitle": "Wir helfen Unternehmen, sich im digitalen Umfeld zurechtzufinden und ihre Ziele zu erreichen",
-    "hero.cta": "Loslegen",
-    "hero.services": "Unser Service",
+    "hero.cta": "Kontakt",
 
     // Services
-    "services.title": "Unser Service",
-    "services.subtitle": "Umfassende digitale Lösungen für Ihre Geschäftsanforderungen",
-    "services.web": "Webentwicklung",
-    "services.web.desc": "Individuelle Websites und Webanwendungen",
-    "services.mobile": "Mobile Apps",
-    "services.mobile.desc": "iOS und Android Anwendungen",
-    "services.cloud": "Cloud-Lösungen",
-    "services.cloud.desc": "Skalierbare Cloud-Infrastruktur",
+    "services.title": "Digitales Wegemanagement",
+    "services.subtitle":
+      "Schöne Landschaften allein reichen nicht aus - gepflegte Wegweiser, saubere Rastplätze und funktionierende Mülleimer sind essenziell für ein hochwertiges Wandererlebnis.",
+    "services.items.webDevelopment": "Ein effizientes digitales Wegemanagement ist die Grundlage dafür, Wanderwege langfristig attraktiv und nutzerfreundlich zu gestalten.",
+    "services.items.digitalStrategy": "In Deutschland verfügen bisher nur wenige Wanderwegenetzwerke über ein modernes digitales Managementsystem.",
+    "services.items.dataAnalytics": "Mit einem durchdachten digitalen Wegemanagement lassen sich Mängel schnell erfassen und beheben, notwendige Wartungen planen und die Qualität der Wege dauerhaft sichern",
+    
+    
 
     // Footer
     "footer.company": "Unternehmen",
@@ -198,20 +190,25 @@ const translations: Record<Language, TranslationKeys> = {
       "Innovative digitale Lösungen für modernes Unternehmen. Wir helfen Unternehmen, sich im digitalen Umfeld zurechtzufinden und ihre Ziele zu erreichen.",
 
     // Features
-    "features.title": "Warum uns wählen",
-    "features.subtitle": "Wir liefern außergewöhnliche Ergebnisse durch innovative Lösungen",
-    "features.innovation": "Innovation",
-    "features.innovation.desc": "Bleiben Sie mit modernsten Technologielösungen vorne",
-    "features.expertise": "Expertise",
-    "features.expertise.desc": "Jahrelange Erfahrung in der digitalen Transformation",
-    "features.support": "Support",
-    "features.support.desc": "24/7 dedizierter Kundensupport",
-    "features.quality": "Qualität",
-    "features.quality.desc": "Engagement für Exzellenz in jedem Projekt",
+    "features.title": "Digitalisierung von Wanderwegen",
+    "features.subtitle":
+      "Im digitalen Zeitalter erwarten Wanderinnen und Wanderer weit mehr als klassische Karten und Wegweiser. Über Smartphones und Apps stehen heute umfassende Informationen wie Streckenverlauf, Schwierigkeitsgrad, Höhenprofile oder aktuelle Wetterdaten jederzeit zur Verfügung.",
+    "features.innovation": "Digitale Angebote",
+    "features.innovation.desc": "begleiten Wanderer entlang der gesamten Reise - vor, während und nach dem Wandern.",
+    "features.expertise": "Vor der Wanderung",
+    "features.expertise.desc":
+      "geht es um Inspiration und Planung, etwa durch interaktive Karten, Tourenvorschläge oder Wetterwarnungen.",
+
+    "features.support": "Während der Wanderung",
+    "features.support.desc": "sind Navigation, aktuelle Hinweise und Echtzeit-Informationen entscheidend.",
+    "features.quality": "Nach der Wanderung ",
+    "features.quality.desc":
+      "bieten Social Media, Newsletter oder Feedbackportale die Chance, das Erlebnis zu teilen, neue Zielgruppen zu erreichen und dauerhafte Wanderbegeisterung zu fördern.",
 
     // Contact
-    "contact.title": "Kontaktieren Sie uns",
-    "contact.subtitle": "Lassen Sie uns besprechen, wie wir Ihr Unternehmen unterstützen können",
+    "contact.title": "Kontakt",
+    "contact.subtitle":
+      "Als Fachinformatikerin für Anwendungsentwicklung mit einem Bachelor of Arts in Intermedia vereine ich technisches Know- how mit kreativem Denken. Ich spezialisiere mich auf die Entwicklung von Konzepten zur Digitalisierung von Wanderwegen sowie auf die Einführung eines digitalen Wegemanagements. Mein Ziel ist es, durch innovative Lösungen die Pflege, Verwaltung und das Erlebnis von Wanderwegen zukunftsfähig zu gestalten.",
     "contact.name": "Ihr Name",
     "contact.email": "E-Mail",
     "contact.phone": "Telefon",
@@ -227,7 +224,6 @@ const translations: Record<Language, TranslationKeys> = {
     // Legal
     "legal.title": "Rechtliche Dokumente",
     "legal.subtitle": "Bitte lesen Sie unsere rechtlichen Dokumente und Richtlinien",
-    
   },
 };
 

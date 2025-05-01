@@ -27,7 +27,7 @@ export default function Navbar() {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "de" : "en");
+    setLanguage(language === "de" ? "en" : "de");
   };
 
   return (
@@ -82,7 +82,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="md:hidden text-[#459a35]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

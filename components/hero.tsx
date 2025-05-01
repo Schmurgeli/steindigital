@@ -3,7 +3,7 @@
 import { useLanguage } from "./language-provider";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -28,14 +28,7 @@ export default function Hero() {
           <h1 className="text-3xl md:text-7xl font-bold mb-6">{t("hero.title")}</h1>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="#services"
-              className="bg-[#459a35] hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
-              scroll={true}
-            >
-              {t("hero.services")}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+          
             <Link
               href="#contact"
               className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
