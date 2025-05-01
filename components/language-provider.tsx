@@ -23,8 +23,6 @@ interface TranslationKeys {
   "services.items.webDevelopment": string;
   "services.items.digitalStrategy": string;
   "services.items.dataAnalytics": string;
- 
-
 
   // Footer
   "footer.company": string;
@@ -85,24 +83,25 @@ const translations: Record<Language, TranslationKeys> = {
   en: {
     // Navbar
     "nav.home": "Home",
-    "nav.services": "Services",
-    "nav.about": "About",
+    "nav.services": "Digitalization of Hiking Trails",
+    "nav.about": "Digital Trail Management",
     "nav.contact": "Contact",
     "nav.language": "DE",
 
     // Hero
-    "hero.title": "DIGITALISATION AND HIKING TOURISM",
-
-    "hero.cta": "Get Started",
+    "hero.title": "DIGITALIZATION AND HIKING TOURISM",
+    "hero.cta": "Contact",
 
     // Services
-    "services.title": "Our Services",
-    "services.subtitle": "Comprehensive digital solutions for your business needs",
-    "services.items.webDevelopment": "Custom web and mobile application development",
-    "services.items.digitalStrategy": "Digital strategy and consulting services",
-    "services.items.dataAnalytics": "Data analytics and business intelligence solutions",
-    
-    
+    "services.title": "Digital Trail Management",
+    "services.subtitle":
+      "Beautiful landscapes alone are not enough - well-maintained signposts, clean rest areas, and functional waste bins are essential for a high-quality hiking experience.",
+    "services.items.webDevelopment":
+      "Efficient digital trail management is the foundation for making hiking trails attractive and user-friendly in the long term.",
+    "services.items.digitalStrategy":
+      "In Germany, only a few hiking trail networks currently have a modern digital management system.",
+    "services.items.dataAnalytics":
+      "With a well-thought-out digital trail management system, deficiencies can be quickly identified and remedied, necessary maintenance can be planned, and trail quality can be permanently secured",
 
     // Footer
     "footer.company": "Company",
@@ -121,21 +120,25 @@ const translations: Record<Language, TranslationKeys> = {
       "Innovative digital solutions for modern businesses. We help companies navigate the digital landscape and achieve their goals.",
 
     // Features
-    "features.title": "Why Choose Us",
-    "features.subtitle": "We deliver exceptional results through innovative solutions",
-    "features.innovation": "Innovation",
-    "features.innovation.desc": "Stay ahead with cutting-edge technology solutions",
-    "features.expertise": "Expertise",
-    "features.expertise.desc": "Years of experience in digital transformation",
-    "features.support": "Support",
-    "features.support.desc": "24/7 dedicated customer support",
-    "features.quality": "Quality",
-    "features.quality.desc": "Commitment to excellence in every project",
+    "features.title": "Digitalization of Hiking Trails",
+    "features.subtitle":
+      "In the digital age, hikers expect much more than classic maps and signposts. Through smartphones and apps, comprehensive information such as route details, difficulty levels, elevation profiles, or current weather data is available at any time.",
+    "features.innovation": "Digital Services",
+    "features.innovation.desc": "accompany hikers throughout their entire journey - before, during, and after hiking.",
+    "features.expertise": "Before the Hike",
+    "features.expertise.desc":
+      "it's about inspiration and planning, through interactive maps, tour suggestions, or weather warnings.",
+    "features.support": "During the Hike",
+    "features.support.desc": "navigation, current notices, and real-time information are crucial.",
+    "features.quality": "After the Hike",
+    "features.quality.desc":
+      "social media, newsletters, or feedback portals offer the opportunity to share the experience, reach new target groups, and promote lasting enthusiasm for hiking.",
 
     // Contact
-    "contact.title": "Get in Touch",
-    "contact.subtitle": "Let's discuss how we can help your business grow",
-    "contact.name": "Name",
+    "contact.title": "Contact",
+    "contact.subtitle":
+      "As a certified IT specialist for application development with a Bachelor of Arts in Intermedia, I combine technical know-how with creative thinking. I specialize in developing concepts for the digitalization of hiking trails and implementing digital trail management. My goal is to make the maintenance, management, and experience of hiking trails future-proof through innovative solutions.",
+    "contact.name": "Your Name",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.address": "Address",
@@ -167,11 +170,12 @@ const translations: Record<Language, TranslationKeys> = {
     "services.title": "Digitales Wegemanagement",
     "services.subtitle":
       "Schöne Landschaften allein reichen nicht aus - gepflegte Wegweiser, saubere Rastplätze und funktionierende Mülleimer sind essenziell für ein hochwertiges Wandererlebnis.",
-    "services.items.webDevelopment": "Ein effizientes digitales Wegemanagement ist die Grundlage dafür, Wanderwege langfristig attraktiv und nutzerfreundlich zu gestalten.",
-    "services.items.digitalStrategy": "In Deutschland verfügen bisher nur wenige Wanderwegenetzwerke über ein modernes digitales Managementsystem.",
-    "services.items.dataAnalytics": "Mit einem durchdachten digitalen Wegemanagement lassen sich Mängel schnell erfassen und beheben, notwendige Wartungen planen und die Qualität der Wege dauerhaft sichern",
-    
-    
+    "services.items.webDevelopment":
+      "Ein effizientes digitales Wegemanagement ist die Grundlage dafür, Wanderwege langfristig attraktiv und nutzerfreundlich zu gestalten.",
+    "services.items.digitalStrategy":
+      "In Deutschland verfügen bisher nur wenige Wanderwegenetzwerke über ein modernes digitales Managementsystem.",
+    "services.items.dataAnalytics":
+      "Mit einem durchdachten digitalen Wegemanagement lassen sich Mängel schnell erfassen und beheben, notwendige Wartungen planen und die Qualität der Wege dauerhaft sichern",
 
     // Footer
     "footer.company": "Unternehmen",
