@@ -31,7 +31,7 @@ export default function Hero() {
           
             <Link
               href="#contact"
-              className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
+              className="bg-[#459a35] hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
               scroll={true}
             >
               {t("hero.cta")}

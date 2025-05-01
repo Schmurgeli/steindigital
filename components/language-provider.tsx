@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 type Language = "en" | "de";
 
@@ -233,6 +233,17 @@ const translations: Record<Language, TranslationKeys> = {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("en");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    // Get the browser's language
+    const browserLang = navigator.language.toLowerCase();
+    // If the language starts with 'de', use German
+    if (browserLang.startsWith("de")) {
+      setLanguage("de");
+    }
+  }, []);
 
   const t = (key: keyof TranslationKeys) => {
     return translations[language][key];
