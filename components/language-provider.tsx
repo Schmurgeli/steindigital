@@ -232,16 +232,16 @@ const translations: Record<Language, TranslationKeys> = {
 };
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("de");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     // Get the browser's language
     const browserLang = navigator.language.toLowerCase();
-    // If the language starts with 'de', use German
-    if (browserLang.startsWith("de")) {
-      setLanguage("de");
+    // If the language does NOT start with 'de', switch to English
+    if (!browserLang.startsWith("de")) {
+      setLanguage("en");
     }
   }, []);
 
