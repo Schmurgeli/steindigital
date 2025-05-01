@@ -34,13 +34,13 @@ export default function Contact() {
               </div>
             </div> */}
 
-            <div className="flex items-start">
+            {/* <div className="flex items-start">
               <MapPin className="h-6 w-6 text-[#459a35] mr-3 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-medium">{t("contact.address")}</p>
                 <p className="text-gray-600">Am Sonnenhang 37, 65321 Heidenrod, Deutschland</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

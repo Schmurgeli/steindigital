@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SteinDigital",
+  title: "steindigital",
   description: "Digital solutions for modern businesses",
   generator: "v0.dev",
   icons: {
